@@ -1,14 +1,25 @@
 # Tech for Social Impact: Biz Apps Demo Repository
 
-Welcome to the Tech for Social Impact Demo Repository. This repository was created to showcase sample solutions that run in the Power Platform and Dynamics 365 for our nonprofit and NGO customers.
-
+Welcome to the Tech for Social Impact Biz Apps Demo Repository. This repository was created to showcase sample solutions that run in the Power Platform and Dynamics 365 for our nonprofit and NGO customers.
+![BizAppsIcons](assets/BizAppsIcons.png)
 
 ## Demos
 
+### Power Platform
 Below is a listing of the sample solutions available. These sample solution files are menat for demonstation purposes only to quickly showcase various features across the platform.
 | Demo Name | Power Apps | Power Automate | Power Pages | Copilot Studio | AI Builder | Dataverse | Premium Licensing Needed | 
 | --------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [Clothing Pricing Tool](demos/clothing-pricing-lookup-tool/README.md) | ✔️ | ✔️ |  | ✔️ | ✔️ | ✔️ | 
+| [Clothing Pricing Tool](demos/clothing-pricing-lookup-tool/README.md) | ✔️ | ✔️ |  |  | ✔️ | ✔️ | ✔️ | 
+
+### Dynamics 365 ERP
+| Demo Name | Finance | Supply Chain | Project Operations | Commerce | Human Resources |
+| --------------- | :---: | :---: | :---: | :---: | :---: | 
+| [Demo Name](demos/demolink/README.md) | ✔️ | ✔️ |  |  | ✔️ |
+
+### Dynamics 365 CRM
+| Demo Name | Sales | Customers Insights | Customer Service | Contact Center | Field Service |
+| --------------- | :---: | :---: | :---: | :---: | :---: | 
+| [Demo Name](demos/demolink/README.md) | ✔️ | ✔️ |  |  | ✔️ |
 
 
 ## Webinar Series
