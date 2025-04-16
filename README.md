@@ -1,4 +1,4 @@
-# Tech for Social Impact: Business Applications Demo Repository
+# Tech for Social Impact: Biz Apps Demo Repository
 
 Welcome to the Tech for Social Impact Demo Repository. This repository was created to showcase sample solutions that run in the Power Platform and Dynamics 365 for our nonprofit and NGO customers.
 
