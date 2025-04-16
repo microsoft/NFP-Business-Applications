@@ -9,7 +9,7 @@ Welcome to the Tech for Social Impact Biz Apps Demo Repository. This repository 
 Below is a listing of the sample solutions available. These sample solution files are meant for demonstration purposes only to quickly showcase various features across the platform.
 | Demo Name | Power Apps | Power Automate | Power Pages | Copilot Studio | AI Builder | Dataverse | Premium Licensing Needed | 
 | --------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [Clothing Pricing Tool](demos/clothing-pricing-lookup-tool/README.md) | ✔️ | ✔️ |  |  | ✔️ | ✔️ | ✔️ | 
+| [AI Pricing Tool](demos/clothing-pricing-lookup-tool/README.md) | ✔️ | ✔️ |  |  | ✔️ | ✔️ | ✔️ | 
 
 ### Dynamics 365 ERP
 | Demo Name | Finance | Supply Chain | Project Operations | Commerce | Human Resources |
