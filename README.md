@@ -1,14 +1,37 @@
-# Project
+# Tech for Social Impact: Business Applications Demo Repository
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+Welcome to the Tech for Social Impact Demo Repository. This repository was created to showcase sample solutions that run in the Power Platform and Dynamics 365 for our nonprofit and NGO customers.
 
-As the maintainer of this project, please make a few updates:
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+## Demos
+
+Below is a listing of the sample solutions available. These sample solution files are menat for demonstation purposes only to quickly showcase various features across the platform.
+| Demo Name | Power Apps | Power Automate | Power Pages | Copilot Studio | AI Builder | Dataverse | Premium Licensing Needed | 
+| --------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| [Clothing Pricing Tool](demos/clothing-pricing-lookup-tool/README.md) | ✔️ | ✔️ |  | ✔️ | ✔️ | ✔️ | 
+
+
+## Webinar Series
+
+We have various webinar series aimed to connect with our nonprofit and NGO customers to showcase and share the latest in the Power Platform
+* [Power Hour](link here)
+* [Power Platform for Nonprofits Webinar Series](https://aka.ms/nfpwebinars)
+
+
+## Training Resources
+
+### Power Apps and Power Automate
+
+* [Power Platform Learning Paths](https://docs.microsoft.com/en-us/learn/powerplatform/)
+* [Power Platform Center of Excellence Starter Kit](https://docs.microsoft.com/en-us/power-platform/guidance/coe/starter-kit)
+* [Power CAT Adoption Maturity Model](https://powerapps.microsoft.com/en-us/blog/power-cat-adoption-maturity-model-repeatable-patterns-for-successful-power-platform-adoption/)
+* [AI Builder Labs](https://docs.microsoft.com/en-us/ai-builder/learn-ai-builder)
+
+### Dynamics 365
+
+* [Dynamics 365 Learning Paths](https://docs.microsoft.com/en-us/learn/dynamics365/)
+* [Dynamics 365 Certifications](https://docs.microsoft.com/en-us/learn/certifications/browse/?technology=Microsoft%20Dynamics%20365&products=dynamics-365)
+
 
 ## Contributing
 
