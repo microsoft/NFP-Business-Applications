@@ -88,7 +88,7 @@ To deploy and use this solution, your environment must meet the following requir
 - Access to the **Power Platform Admin Center** to import and configure solution components
 
 ### 💳 Licensing Requirements
-The solution uses features from multiple Power Platform products. Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.
+This solution is built on the Microsoft Power Platform. **Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
 
 | **Capability**                  | **License Requirement**                                                                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
