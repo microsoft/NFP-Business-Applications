@@ -6,7 +6,6 @@ Nonprofits today face significant challenges: funding shortfalls, rising service
 
 This whitepaper explores current nonprofit challenges, sector-wide technology trends, the role of low-code/no-code platforms, and real-world examples of how the Microsoft Power Platform is driving impact through intelligent automation, data integration, and AI-powered decision-making.
 
----
 
 ## Current Nonprofit Business Challenges
 
@@ -32,7 +31,6 @@ The COVID-19 pandemic permanently altered how nonprofits operate, introducing ne
 ### 6. Technology and Digital Skills Gap
 Another less tangible challenge is the gap in technology adoption and skills. The pandemic catalyzed digital transformation across sectors, and nonprofits are no exception – yet many organizations still lag in tech capacity. In one survey, 74% of nonprofit leaders said digital transformation is a “must-have,” but only 12% rated their organization’s digital maturity as highsalesforce.com. Donors themselves now expect a better digital experience (60% of nonprofits say their donors want more sophisticated engagement than their current tech provides)<sup>[6]</sup>. This puts pressure on NGOs to modernize outdated systems and upskill staff. However, budget limitations and lack of in-house IT expertise make it difficult to implement new software, integrate data systems, or leverage emerging tech like artificial intelligence. Many nonprofits are piecing together spreadsheets, legacy databases, and manual processes, resulting in inefficiencies and data silos that hinder decision-making<sup>[5]</sup>. Overcoming this technology gap – within tight financial constraints – is now a critical challenge as the sector enters 2025.
 
----
 
 ## Sector-Wide Technology Trends
 Amid these challenges, nonprofits are adopting several technology-driven strategies and trends to navigate the new landscape. Since 2023, a few key tech trends have been shaping the nonprofit and NGO sector:
@@ -57,7 +55,6 @@ With greater digital adoption comes a growing awareness of cybersecurity and pri
 
 In essence, the nonprofit sector is rapidly evolving through technology. Modern nonprofits are aiming to be data-driven, digitally engaged, and AI-assisted organizations, all while collaborating more closely and maintaining the trust of their stakeholders. The post-pandemic period has shown that those who adapt to these tech trends are better positioned to weather funding shortfalls and deliver on their missions effectively<sup>[7]</sup><sup>[4]</sup>.
 
----
 
 ## Why Low-Code/No-Code Platforms Matter
 
@@ -81,7 +78,6 @@ As nonprofits deploy more low-code solutions, they are also learning to govern t
 
 In summary, low-code/no-code platforms level the playing field for nonprofits. They translate technological wish lists into achievable projects by removing traditional barriers of cost and complexity. The result is that nonprofits can rapidly modernize workflows—from volunteer management to donor engagement—on their own terms, creating apps and automations that directly address their mission needs. This agility is proving crucial in an era when challenges evolve quickly and organizations must adapt or risk falling behind<sup>[13]</sup>.
 
----
 
 ## Microsoft Power Platform: Impact Areas for Nonprofits
 Microsoft’s Power Platform – encompassing Power Apps, Power Automate, Power Pages, AI Builder, Power BI, and the new Copilot capabilities (among others) – is a leading example of a low-code platform making an impact in the nonprofit sector. Leveraging the Power Platform, nonprofits can tackle a wide range of challenges. Here we outline key impact areas and solutions, highlighting how each component of the Power Platform (and similar tools) can be applied to help nonprofits at scale:
@@ -104,7 +100,6 @@ Power BI lets nonprofits visualize and monitor real-time metrics. AI Builder ena
 ## 6. Governance, Security, and Scalability (Managed Environments)
 As Power Platform use scales across teams or countries, governance is vital. Managed Environments let IT admins enforce security, track usage, and apply data policies like DLP<sup>[13]</sup>. This allows nonprofits to expand their low-code initiatives with confidence—enabling citizen development without losing oversight.
 
----
 
 ## Real-World Examples
 
@@ -116,7 +111,6 @@ As Power Platform use scales across teams or countries, governance is vital. Man
 - **[Nature Conservancy](https://www.linkedin.com/pulse/power-apps-nonprofits-driving-community-impact-examples-broschk-eq5ef)**: Standardized global conservation project tracking with a custom Power App.
 - **[YMCA](https://www.linkedin.com/pulse/power-apps-nonprofits-driving-community-impact-examples-broschk-eq5ef)**: Collected real-time community feedback and adjusted services based on mobile app insights.
 
----
 
 ## Key Takeaways
 
@@ -126,13 +120,32 @@ As Power Platform use scales across teams or countries, governance is vital. Man
 - AI and automation help nonprofits scale, remain transparent, and reduce manual workload.
 - Real-world successes demonstrate how quickly Power Platform can drive mission impact.
 
----
 
 ## Looking Ahead
 
 As nonprofits continue to navigate economic and social uncertainties, their ability to leverage technology will be a deciding factor in mission success. The post-pandemic era has shown that adopting digital tools is not just about efficiency—it’s about resilience and adaptability. Embracing low-code platforms and AI-driven solutions allows nonprofits to iterate quickly, whether responding to a sudden crisis or a new donor expectation. Crucially, technology is enabling nonprofits to uphold the values of transparency and accountability by better tracking and sharing their impact<sup>[7]</sup><sup>[4]</sup>.
 
 In sum, by embracing platforms like Microsoft Power Platform, nonprofits can build solutions that scale, adapt to changing needs, and meet the expectations of donors, regulators, and the communities they serve.
+
+
+# References
+
+These are the sources cited throughout the whitepaper.
+
+1. [Council of Nonprofits – Nonprofit Economic Vitality](https://www.councilofnonprofits.org/trends-policy-issues)  
+2. [RKD Group Blog – 8 Fundraising Trends](https://blog.rkdgroup.com/8-major-nonprofit-fundraising-trends-as-we-close-out-2023)  
+3. [Eventgroove – 2024 Fundraising Trends](https://www.eventgroove.com/blog/fundraising-trends-2024/)  
+4. [Liquid Light – What 2024 Holds for Nonprofits and NGOs](https://www.liquidlight.co.uk/blog/what-2024-holds-for-nonprofits-and-ngos/)  
+5. [Qgiv – Top Nonprofit Technology Trends in 2024](https://www.qgiv.com/blog/nonprofit-technology-trends/)  
+6. [Salesforce – Nonprofit Cloud Innovations](https://www.salesforce.com/news/stories/nonprofit-cloud-innovations-2023/)  
+7. [JFW Accounting Services – 2024 Nonprofit Industry Trends](https://jfwaccountingservices.cpa/2024-nonprofit-industry-trends/)  
+8. [Johnson Center – 11 Trends in Philanthropy for 2024](https://johnsoncenter.org/blog/11-trends-in-philanthropy-for-2024/)  
+9. [Nonprofit Quarterly – Sector Adopting AI](https://nonprofitquarterly.org/sector-adopting-ai-building-reserves-and-expanding-survey-shows/)  
+10. [HSO – Microsoft Copilot for Nonprofits](https://www.hso.com/blog/microsoft-copilot-and-copilot-studio-for-non-profits-unleashing-ai-for-seamless-productivity-fundraising-and-impact-measurement/)  
+11. [OSAE – Nonprofit Trends 2024](https://osae.org/aws/OSAE/pt/sd/news_article/556777/_PARENT/layout_details/false)  
+13. [PA Consulting – Power Apps & Power Automate Use Cases](https://blog.pa.com.au/microsoft-power-platform/power-apps-and-power-automate-use-cases-for-not-for-profits/)  
+14. [Microsoft – Power Platform Case Studies: Degrees of Change](https://learn.microsoft.com/en-us/power-platform/guidance/case-studies/nonprofit)  
+15. [LinkedIn – Power Apps for Nonprofits Examples](https://www.linkedin.com/pulse/power-apps-nonprofits-driving-community-impact-examples-broschk-eq5ef)
 
 ---
 
