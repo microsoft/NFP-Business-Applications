@@ -99,10 +99,10 @@ The solution uses features from multiple Power Platform products. Visit [Microso
 
 | **Capability**                  | **License Requirement**                                                                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Power Apps Canvas App           | ✔ [Power Apps Premium](https://learn.microsoft.com/power-apps/maker/canvas-apps/get-started) (recommended for cross-product and Dataverse integration) |
+| Power Apps Canvas App           | ✔ [Power Apps Premium](https://www.microsoft.com/en-us/power-platform/products/power-apps/pricing?msockid=1bfb110773b5613b1fc305fa72b26073) (recommended for cross-product and Dataverse integration) |
 | Dataverse                       | ✔ Included with Power Apps license when used as the data platform                                                                                      |
-| AI Builder (GPT-4o model usage) | ✔ [AI Builder credits](https://learn.microsoft.com/ai-builder/pricing) (separate purchase may be required)                                             |
-| Power Automate Cloud Flows      | ✔ [Power Automate Premium](https://learn.microsoft.com/power-automate/pricing) or Process license                                                      |
+| AI Builder (GPT-4o model usage) | ✔ [AI Builder credits](https://learn.microsoft.com/en-us/ai-builder/credit-management) (separate purchase may be required)                                             |
+| Power Automate Cloud Flows      | ✔ [Power Automate Premium](https://www.microsoft.com/en-us/power-platform/products/power-automate/pricing?msockid=1bfb110773b5613b1fc305fa72b26073) or Process license                                                      |
 
 > ⚠️ AI Builder credits are not included in Power Apps Developer environments by default.
 
