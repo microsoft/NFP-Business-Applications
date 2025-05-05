@@ -96,8 +96,31 @@ This solution is built on the Microsoft Power Platform. **Visit [Microsoft for N
 | Dataverse                       | ✔ Included with Power Apps license when used as the data platform                                                                                      |
 | AI Builder (GPT-4o model usage) | ✔ [AI Builder credits](https://learn.microsoft.com/en-us/ai-builder/credit-management) (separate purchase may be required)                                             |
 | Power Automate Cloud Flows      | ✔ [Power Automate Premium](https://www.microsoft.com/en-us/power-platform/products/power-automate/pricing?msockid=1bfb110773b5613b1fc305fa72b26073) or Process license                                                      |
+#### AI Builder credits ####
+The following guidance is based on AI Builder licensing rates as of May 2025. Please consult the [Power Platform Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) for the latest pricing information.
 
-> ⚠️ AI Builder credits are not included in Power Apps Developer environments by default.
+  - AI Builder is licensed based on monthly capacity via the AI Builder capacity add-on. Usage is measured in **service credits**.
+  - The Clothing Price Lookup model, as provided, consumes **59 credits per run**.
+  - Because image quality or tagging may result in an invalid or incomplete response, we recommend budgeting for **two runs per textile**, allowing for a retry.
+  - To estimate your required capacity: **Monthly Credits Needed = Textiles per Month × 118 credits** (i.e., 59 credits × 2 runs).
+  - **Example**: If an organization processes 100,000 textiles per month:  
+    `100,000 × 118 = 11,800,000 credits/month`
+
+##### 💳 AI Builder Capacity Pack Options (as of May 2025) #####
+Please consult the [Power Platform Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) for the latest licensing information. 
+**Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
+
+| **Capacity Pack Tiers** | **AI Builder add-on SKU Names**        | **Minimum Purchase** | 
+|--------------------------|----------------------------------------|------------------------|
+| Tier 1                  | AI Builder Capacity T1 add-on          | 1 capacity pack        |
+| Tier 2                  | AI Builder Capacity T2 add-on          | 10 capacity packs      |
+| Tier 3                  | AI Builder Capacity T3 add-on          | 50 capacity packs      |
+
+- 📌 *Each pack includes **1 million service credits** per month.
+- ⚠️ AI Builder credits are not included in Power Apps Developer environments by default.
+- *Service credits are used across Power Automate, Power Apps, and Dynamics 365 AI Builder models.
+- *Credits apply to both training and production use.
+- For AI Builder capacity add-on SKUs, purchased capacity is enforced monthly and unused service credits do not carry over month to month.
 
 ### 🔗 Permissions & Connectors
 
