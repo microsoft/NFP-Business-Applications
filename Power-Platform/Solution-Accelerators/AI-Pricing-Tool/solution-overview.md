@@ -1,7 +1,7 @@
 # 🏷️ AI Pricing Lookup Tool for Clothing
 This solution showcases how Power Platform can be used to automate pricing lookup and item cataloging for donated clothing. It combines AI Builder, Power Apps, Dataverse, and Power Automate to streamline intake workflows, enhance pricing consistency, and demonstrate extensible capabilities for nonprofit or retail scenarios.
 
-![image](https://github.com/microsoft/TSI-Business-Applications/blob/main/PowerPlatform/demos/ai-pricing-tool/assets/CanvasApp.png)
+![image](/assets/PP-AI-Pricing-Tool.png)
 
 # ⚠️ Disclaimer
 This solution is provided as a Power Platform accelerator to help organizations explore, test, and customize AI-driven clothing pricing workflows for their own internal scenarios. It is **not a production-ready solution** and is intended solely for demonstration and proof-of-concept purposes.
