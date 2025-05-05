@@ -85,7 +85,7 @@ To deploy and use this solution, your environment must meet the following requir
 ### ✅ Environment Setup
 
 - A **Microsoft Power Platform environment** with **Dataverse** enabled
-- Access to the **Power Platform Admin Center** to import and configure solution components
+- Access to the **Power Platform** to import and configure solution components
 
 ### 💳 Licensing Requirements
 This solution is built on the Microsoft Power Platform. **Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
