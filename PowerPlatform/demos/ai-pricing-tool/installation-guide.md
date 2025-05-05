@@ -12,7 +12,7 @@ Before you begin, ensure the following:
 - You have access to a Microsoft Power Platform environment with **Dataverse** enabled.
   - A dedicated environment is recommended for this deployment.
   - See [Environments](https://learn.microsoft.com/en-us/power-platform/admin/environments-overview) documentation.
-- You are assigned the **Environment Maker** role.
+- You are assigned the **System Customizer** role in the environment.
 - You have **Power Apps Premium** or equivalent licenses.
 - You have sufficient **AI Builder credits** available.
   - See [LicensingCalculator.xlsx](/licensingcalculator.xlsx)
@@ -39,36 +39,41 @@ The solution package includes:
 4. Click **Import solution**.
 5. Upload the provided `.zip` solution file.
 6. Click **Next**, review dependencies, and then **Import**.
+7. The solution may take a few minutes to import. You will see a green banner along the top of the Solution explorer screen that says, `Solution "AI Pricing Tool" imported successfully.` once the installation is complete. 
 
 ### 2. **Verify AI Builder Licensing**
 
-- Navigate to [AI Builder > Models](https://make.powerapps.com/aiBuilder/models).
-- Ensure the **Clothing Price Check** model is listed and successfully published.
+- After import, navigate to [AI Builder > Models](https://make.powerapps.com/aiBuilder/models).
+  - Double-check that you have selected the environment you installed the solution in.
+- Select the tile that says **Prompts now have their own section**
+- Ensure the **Clothing Price Check** model is listed under **My Prompts** with a Status of `Published`.
 - Confirm AI Builder credits are available in your tenant.
+  - See [AI Builder Credit Management](https://learn.microsoft.com/en-us/ai-builder/credit-management)
 
 ### 3. **Configure Connections**
 
 - During import, ensure that the **Dataverse** connection reference is mapped correctly.
-- After import, open the flow named `Barcode Generator` and reauthenticate if needed.
+- After import, in the left menu, navigate to **Solutions**.
+- Select the **AI Pricing Tool** solution
+- Select and open the flow named `Clothing Price Lookup | Barcode Generator` and reauthenticate if needed.
 
-### 4. **Publish the Canvas App**
+### 4. **Publish All Customizations**
 
-1. Go to **Apps** in the Maker Portal.
-2. Open `Clothing Price Lookup`.
-3. Click **Edit**, verify configuration, then **Publish**.
+- After import, in the left menu, navigate to **Solutions**.
+- In the top ribbon, select **Publish All Customizations**.
 
 
 ## ⚙️ Post-Installation Tasks
 
-- **AI Model Testing**: Open the app, capture an image, and test the **Run Price Search** button.
+- **AI Model Testing**: Open the `Clothing Price Lookup` app, capture an image, and test the **Run Price Search** button.
 - **Barcode Flow**: Verify that clicking **Generate Barcode** triggers the flow and creates a Dataverse record.
-- **Color Coding Logic**: Color tag display is handled in-app only and does not write to Dataverse.
+- **Color Coding Logic**: Verify when a barcode is generated, the app reveals a color-coded tag. Note that color tag display is handled in-app only and does not write to Dataverse. 
 - **Manual Overrides**: Try overriding brand, description, and pricing in the app before saving.
 
 
 ## 🚫 Known Limitations
 
-- Barcode color tag is not stored in Dataverse (display-only).
+- Barcode color tag is not stored in Dataverse (in-app display-only).
 - “Post to eBay” button is illustrative only and does not perform any action.
 - The pricing model is a demonstration and should be validated against real-world data before production use.
 
