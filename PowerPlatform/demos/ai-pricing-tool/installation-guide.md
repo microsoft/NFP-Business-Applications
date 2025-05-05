@@ -26,7 +26,7 @@ The solution package includes:
 - AI Model: `Clothing Price Check`
 - Power Automate Flow: `Barcode Generator`
 - Dataverse Table: `DonatedGoods`
-- Connection Reference: Dataverse
+- Connection Reference: `Dataverse`
 
 
 ## 📥 Step-by-Step Installation
