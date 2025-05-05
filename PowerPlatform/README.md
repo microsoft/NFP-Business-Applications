@@ -4,5 +4,5 @@ These solutions are intended to make it easier for nonprofits, ISV partners and 
 ## Contents
 | Demo Name | Power Apps | Power Automate | Power Pages | Copilot Studio | AI Builder | Dataverse | Premium Licensing Needed | 
 | --------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [AI Pricing Tool](/PowerPlatform/demos/ai-pricing-tool/README.md) | ✔️ | ✔️ |  |  | ✔️ | ✔️ | ✔️ | 
+| [AI Pricing Tool](/PowerPlatform/demos/ai-pricing-tool/solution-overview.md) | ✔️ | ✔️ |  |  | ✔️ | ✔️ | ✔️ | 
 
