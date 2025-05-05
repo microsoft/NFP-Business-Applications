@@ -2,7 +2,7 @@
 
 This guide walks you through the steps required to install and configure the AI Pricing Lookup solution within your Power Platform environment.
 
-> ⚠️ This solution is intended for demonstration purposes only. Please review the [solution-overview.md](PowerPlatform/demos/ai-pricing-tool/solution-overview.md) before deploying.
+> ⚠️ This solution is intended for demonstration purposes only. Please review the [solution-overview.md](/PowerPlatform/demos/ai-pricing-tool/solution-overview.md) before deploying.
 
 
 ## ✅ Prerequisites
