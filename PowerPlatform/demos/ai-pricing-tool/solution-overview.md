@@ -1,17 +1,15 @@
-# 🧠 AI Pricing Lookup Tool for Clothing
+# 🏷️ AI Pricing Lookup Tool for Clothing
 This solution showcases how Power Platform can be used to automate pricing lookup and item cataloging for donated clothing. It combines AI Builder, Power Apps, Dataverse, and Power Automate to streamline intake workflows, enhance pricing consistency, and demonstrate extensible capabilities for nonprofit or retail scenarios.
 
 ![image](https://github.com/microsoft/TSI-Business-Applications/blob/main/PowerPlatform/demos/ai-pricing-tool/assets/CanvasApp.png)
 
-> ⚠️ **Disclaimer**
-> 
-> This solution is provided as a Power Platform accelerator to help organizations explore, test, and customize AI-driven clothing pricing workflows for their own internal scenarios. It is **not a production-ready solution** and is intended solely for demonstration and proof-of-concept purposes.
-> 
-> Microsoft makes no warranties, express or implied, with respect to the solution. **Use of this solution is at your own risk.** Microsoft does not assume any responsibility or liability for any direct or indirect issues that may arise from its deployment or use, including but not limited to data integrity, AI accuracy, pricing estimates, or security compliance.
-> 
-> Organizations are solely responsible for evaluating, testing, securing, and modifying the solution to meet their specific requirements before any production use.
+# ⚠️ Disclaimer
+This solution is provided as a Power Platform accelerator to help organizations explore, test, and customize AI-driven clothing pricing workflows for their own internal scenarios. It is **not a production-ready solution** and is intended solely for demonstration and proof-of-concept purposes.
+ 
+Microsoft makes no warranties, express or implied, with respect to the solution. **Use of this solution is at your own risk.** Microsoft does not assume any responsibility or liability for any direct or indirect issues that may arise from its deployment or use, including but not limited to data integrity, AI accuracy, pricing estimates, or security compliance.
+ 
+Organizations are solely responsible for evaluating, testing, securing, and modifying the solution to meet their specific requirements before any production use.
 
----
 
 ## 📎 Components
 
@@ -24,7 +22,6 @@ This solution showcases how Power Platform can be used to automate pricing looku
 | DonatedGoods                              | Dataverse Table      | Stores item data including brand, description, price, and barcode                                   |
 | Houseware Price Check (optional)          | AI Model             | Optional extension for non-clothing items                                                           |
 
----
 
 ## 🧠 AI Capabilities
 
@@ -57,8 +54,6 @@ The model is executed with three parameters: the item image, manually entered co
 }
 ```
 
----
-
 ## 🚀 How It Works
 
 1. **Capture** — The user captures or uploads an image of a donated clothing item within the Power App.
@@ -71,7 +66,6 @@ The model is executed with three parameters: the item image, manually entered co
 7. **Store** — The item record is saved in Dataverse, ready for inventory tracking, reporting, or downstream workflows.
 8. **E-Commerce Integration (Optional)** — A non-functional **Post to eBay** button illustrates future extensibility for online resale integration.
 
----
 
 ## 💡 Use Case Scenarios
 
@@ -83,7 +77,6 @@ This accelerator demonstrates:
 - Recycling content capture to support item sorting and eco-friendly disposal
 - Integration across Power Apps, AI Builder, Power Automate, and Dataverse
 
----
 
 ## 🛠️ Prerequisites
 
@@ -111,7 +104,6 @@ The solution uses features from multiple Power Platform products. Visit [Microso
 - Assign appropriate Dataverse roles (e.g., **Environment Maker**, **Basic User**)
 - For optional scraping or e-commerce extensions, **custom connectors** or **premium connectors** may be required
 
----
 
 ## Submit feedback
 
@@ -122,4 +114,3 @@ If your bug or feature request has already been reported, join the conversation 
 - 👍: upvote
 - 👎: downvote
 
----
