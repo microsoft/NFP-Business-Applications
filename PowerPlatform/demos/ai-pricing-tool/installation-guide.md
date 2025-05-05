@@ -14,8 +14,28 @@ Before you begin, ensure the following:
   - See [Environments](https://learn.microsoft.com/en-us/power-platform/admin/environments-overview) documentation.
 - You are assigned the **System Customizer** role in the environment.
 - You have **Power Apps Premium** or equivalent licenses.
-- You have sufficient **AI Builder credits** available.
-  - See [LicensingCalculator.xlsx](/licensingcalculator.xlsx)
+- You have sufficient **AI Builder credits** available. The following guidance is based on AI Builder licensing rates as of May 2025. Please consult the [Power Platform Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) for the latest pricing information.
+
+  - AI Builder is licensed based on monthly capacity via the AI Builder capacity add-on. Usage is measured in **service credits**.
+  - The Clothing Price Lookup model, as provided, consumes **59 credits per run**.
+  - Because image quality or tagging may result in an invalid or incomplete response, we recommend budgeting for **two runs per textile**, allowing for a retry.
+  - To estimate your required capacity: **Monthly Credits Needed = Textiles per Month × 118 credits** (i.e., 59 credits × 2 runs).
+  - **Example**: If an organization processes 100,000 textiles per month:  
+    `100,000 × 118 = 11,800,000 credits/month`
+
+### 💳 AI Builder Capacity Pack Pricing (as of May 2025)
+Please consult the [Power Platform Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) for the latest licensing information.
+
+| **Capacity Pack Tiers** | **AI Builder add-on SKU Names**        | **Minimum Purchase** | 
+|--------------------------|----------------------------------------|------------------------|
+| Tier 1                  | AI Builder Capacity T1 add-on          | 1 capacity pack        |
+| Tier 2                  | AI Builder Capacity T2 add-on          | 10 capacity packs      |
+| Tier 3                  | AI Builder Capacity T3 add-on          | 50 capacity packs      |
+
+> 📌 *Each pack includes **1 million service credits** per month.  
+> *Service credits are used across Power Automate, Power Apps, and Dynamics 365 AI Builder models.  
+> *Credits apply to both training and production use.
+> For AI Builder capacity add-on SKUs, purchased capacity is enforced monthly and unused service credits do not carry over month to month.
 
 
 ## 📦 Solution Contents
