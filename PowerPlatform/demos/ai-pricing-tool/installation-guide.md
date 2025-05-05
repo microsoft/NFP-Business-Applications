@@ -24,7 +24,8 @@ Before you begin, ensure the following:
     `100,000 × 118 = 11,800,000 credits/month`
 
 ### 💳 AI Builder Capacity Pack Pricing (as of May 2025)
-Please consult the [Power Platform Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) for the latest licensing information.
+Please consult the [Power Platform Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) for the latest licensing information. 
+**Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
 
 | **Capacity Pack Tiers** | **AI Builder add-on SKU Names**        | **Minimum Purchase** | 
 |--------------------------|----------------------------------------|------------------------|
