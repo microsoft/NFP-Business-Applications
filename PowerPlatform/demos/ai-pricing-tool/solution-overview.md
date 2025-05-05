@@ -124,9 +124,8 @@ Please consult the [Power Platform Licensing Guide](https://go.microsoft.com/fwl
 
 ### 🔗 Permissions & Connectors
 
-- Assign appropriate Dataverse roles (e.g., **Environment Maker**, **Basic User**)
+- Assign appropriate Dataverse roles (e.g., **System Customizer**)
 - For optional scraping or e-commerce extensions, **custom connectors** or **premium connectors** may be required
-
 
 ## Submit feedback
 
