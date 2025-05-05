@@ -65,7 +65,12 @@ The solution package includes:
 
 ## ⚙️ Post-Installation Tasks
 
-- **AI Model Testing**: Open the `Clothing Price Lookup` app, capture an image, and test the **Run Price Search** button.
+- **AI Model Testing**: Open the `Clothing Price Lookup` app, capture or upload an image, and test the **Run Price Search** button.
+  - For best results:
+    - Ensure the image is taken in a well-lit area to capture clear details
+    - Ensure the entire item is visible in the frame
+    - Place the item against a plain background for better focus
+    - Include any notable markings, logos or branding to help the system identify the item
 - **Barcode Flow**: Verify that clicking **Generate Barcode** triggers the flow and creates a Dataverse record.
 - **Color Coding Logic**: Verify when a barcode is generated, the app reveals a color-coded tag. Note that color tag display is handled in-app only and does not write to Dataverse. 
 - **Manual Overrides**: Try overriding brand, description, and pricing in the app before saving.
