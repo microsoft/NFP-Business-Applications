@@ -1,6 +1,7 @@
 # 🧠 AI Pricing Lookup Tool for Clothing
+This solution showcases how Power Platform can be used to automate pricing lookup and item cataloging for donated clothing. It combines AI Builder, Power Apps, Dataverse, and Power Automate to streamline intake workflows, enhance pricing consistency, and demonstrate extensible capabilities for nonprofit or retail scenarios.
 
-This internal Microsoft demo solution showcases how Power Platform can be used to automate pricing lookup and item cataloging for donated clothing. It combines AI Builder, Power Apps, Dataverse, and Power Automate to streamline intake workflows, enhance pricing consistency, and demonstrate extensible capabilities for nonprofit or retail scenarios.
+![image](https://github.com/microsoft/TSI-Business-Applications/blob/main/PowerPlatform/demos/ai-pricing-tool/assets/CanvasApp.png)
 
 > ⚠️ **Disclaimer**
 > 
@@ -31,7 +32,7 @@ The solution includes a GPT-4o-based AI Builder model called **Clothing Price Ch
 
 ### 🤖 Key Features
 
-- **Brand Identification** — Detects the brand from the tag input. If unidentifiable, outputs `"Brand not identified"`.
+- **Brand Identification** — Detects the brand from the image input. If unidentifiable, outputs `"Brand not identified"` and prompts the user to tag a photo of the items tag.
 - **Description Generation** — Produces an item description using AI analysis of the image and metadata.
 - **Price Estimation** — Returns a realistic resale price range based on data from platforms like Poshmark, eBay, and ShopGoodwill.
 - **Price Justification** — Provides reasoning behind the price range based on item condition, demand, and market trends.
