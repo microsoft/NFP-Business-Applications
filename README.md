@@ -47,7 +47,15 @@ We have various webinar series aimed to connect with our nonprofit and NGO custo
 * [Dynamics 365 Learning Paths](https://docs.microsoft.com/en-us/learn/dynamics365/)
 * [Dynamics 365 Certifications](https://docs.microsoft.com/en-us/learn/certifications/browse/?technology=Microsoft%20Dynamics%20365&products=dynamics-365)
 
+## Submit feedback
 
+Let us know by filing an issue. 
+Before submitting your issue please search the [issues](https://github.com/microsoft/TSI-Business-Applications/issues) to ensure your issue has not already been reported
+
+If your bug or feature request has already been reported, join the conversation by commenting and adding your reaction. Please use reactions to vote and not "+1" comments.
+- 👍: upvote
+- 👎: downvote
+  
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
