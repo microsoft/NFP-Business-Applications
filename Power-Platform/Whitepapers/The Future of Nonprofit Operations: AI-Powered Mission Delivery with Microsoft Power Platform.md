@@ -21,10 +21,13 @@ While resources are tight, community needs have grown in the post-pandemic era. 
 
 ### 3. Workforce Shortages and Burnout
 Staffing has become a critical operational concern. A 2023 nationwide nonprofit survey found nearly 75% of organizations had job vacancies, with over half reporting more vacancies now than pre-COVID. Frontline program roles are especially hard to fill (74% of nonprofits reported vacancies in direct service positions). The causes include uncompetitive salaries (cited by 72% of nonprofits) and budget constraints (66%), as well as employee stress and burnout (50%). Nonprofits struggle to retain talent when for-profit employers offer higher pay, and prolonged pandemic-era stress has driven many workers out of the sector. This workforce shortage translates directly into diminished service capacity – fewer staff means fewer people served. It also forces remaining staff and volunteers to shoulder heavier workloads, exacerbating burnout in a vicious cycle.<sup>[1]</sup>
+
 ![WorkforceShortages](/Power-Platform/Whitepapers/images/PP-Whitepaper-WorkforceShortages.png)
 
 ### 4. Donor Expectations: Transparency and Trust
 There is a heightened demand for transparency, accountability, and demonstrated impact in the nonprofit sector. Public trust in nonprofits has wavered – the Edelman Trust Barometer recorded a 4-point drop in trust in nonprofits in 2023, with only ~52% of Americans saying they trust nonprofit organizations (meaning nearly half do not)<sup>[2]</sup>. Donors and regulators are calling for clearer reporting on how funds are used and what outcomes are achieved. Stakeholders now “demand evidence of effectiveness” and robust impact measurement to prove an organization’s worth<sup>[4]</sup>. In practice, this means charities must invest more effort in data collection, evaluation, and transparent communication. Nonprofits that cannot readily illustrate their impact risk losing support in an environment where trust is fragile and accountability is expected.
+
+![GivingDecline](/Power-Platform/Whitepapers/images/PP-Whitepaper-GivingDecline.png)
 
 ### 5. Operational Shifts in a Hybrid World
 The COVID-19 pandemic permanently altered how nonprofits operate, introducing new logistical challenges. For instance, in-person fundraising events and service delivery went virtual during 2020–2021 and have only partially reverted. Even as people return to physical events, many organizations report attendance and fundraising event participation are still below pre-pandemic levels. Donors and constituents have grown accustomed to the convenience of virtual engagement, so nonprofits must navigate a hybrid model – running both in-person and online events and services. This requires new skills and tools (e.g. streaming, virtual collaboration platforms) and adds complexity to planning. Moreover, internal operations have shifted to remote or hybrid work, raising the importance of digital infrastructure and cybersecurity. Smaller nonprofits, in particular, struggle to implement secure remote access and collaborative tools with limited IT staff. All told, adapting processes to the “new normal” has been an ongoing test of nonprofits’ agility and resilience.<sup>[5]</sup>
@@ -44,6 +47,7 @@ There is a strong trend toward leveraging data to guide strategy and prove outco
 
 ### 3. Rise of AI and Automation
 AI has emerged as a game-changer for nonprofits, especially since late 2022 and 2023 with the advent of user-friendly AI tools (like OpenAI’s ChatGPT). Many nonprofits are cautiously beginning to experiment with AI to enhance their work<sup>[8]</sup>. This includes using AI for tasks such as grant writing assistance, donor prospect research, automating routine communications, and analyzing large datasets. By 2024, a majority of nonprofits (according to some surveys) are at least exploring AI tools in their operations<sup>[9]</sup>. AI offers the promise of helping small organizations “punch above their weight” by automating labor-intensive processes and generating insights from data that they previously couldn’t analyze. For example, generative AI can draft personalized donor emails or social media content in seconds, saving staff time<sup>[10]</sup>. Predictive models can help identify which donors are likely to give, or which communities have the greatest need, allowing better targeting of resources<sup>[10]</sup>. However, alongside the enthusiasm, nonprofits are also navigating ethical and practical concerns. Sector experts note that successfully integrating AI requires careful strategy—defining use cases, training staff, and addressing biases—and can feel daunting for organizations with limited tech experience<sup>[4]</sup>. Despite these challenges, the post-pandemic period has clearly accelerated AI interest in the nonprofit world, marking it as a significant trend moving into 2025.
+
 ![AIinNonprofits](/Power-Platform/Whitepapers/images/PP-Whitepaper-AIinNonprofits.png)
 
 ### 4. Virtual and Hybrid Engagement
@@ -89,18 +93,22 @@ Nonprofits often struggle with fragmented data spread across donor databases, Ex
 
 ## 2. Custom Applications for Program Management and Service Delivery (Power Apps)
 Power Apps enables nonprofits to rapidly develop tailored applications for their unique program needs – whether it’s tracking beneficiaries, coordinating disaster response, or managing education programs. This has a direct impact on operational efficiency and scale. For instance, the American Red Cross built a custom Power App to manage its volunteer workforce, allowing volunteers to log hours, sign up for shifts, and receive event notifications via a mobile app<sup>[15]</sup>. This replaced manual processes and significantly improved volunteer engagement and retention. Similarly, The Nature Conservancy created a Power App to monitor conservation projects, tracking milestones, budgets, and outcomes in real time<sup>[15]</sup>. With canvas and model-driven apps, nonprofits can support mobile/offline work, increasing field usability. As Degrees of Change found, digitizing their scholarship process with Power Apps enabled them to scale to more students without adding staff<sup>[14]</sup>.
+
 ![PowerAppsValue](/Power-Platform/Whitepapers/images/PP-Whitepaper-PowerAppsValue.png)
 
 ## 3. Process Automation and Workflow Efficiency (Power Automate)
 Power Automate enables organizations to automate a myriad of routine processes, which can dramatically improve productivity. A large nonprofit, for instance, used Power Automate to triage IT helpdesk tickets from multiple vendors, eliminating manual routing<sup>[13]</sup>. Another common use case is expense reporting: a staffer submits a receipt via phone, and a Power Automate flow logs the expense, alerts a manager, and stores the approval<sup>[13]</sup>. Fundraising automations can include sending donor thank-you emails, triggering tasks for major gifts, or updating progress thermometers on websites. These workflows save hours and reduce delays.
+
 ![PowerAutomateValue](/Power-Platform/Whitepapers/images/PP-Whitepaper-PowerAutomateValue.png)
 
 ## 4. External Engagement and Self-Service Portals (Power Pages)
 Power Pages allows nonprofits to build secure web portals for donors, volunteers, or clients without requiring deep web development. These portals connect directly to Dataverse. Degrees of Change used Power Pages to replace PDF-based scholarship applications with a full online experience for students and reviewers<sup>[14]</sup>. Other nonprofits use Power Pages to offer donor login dashboards, grantee submission forms, and volunteer sign-up systems—all with secure login and easy updates.
+
 ![PowerPagesValue](/Power-Platform/Whitepapers/images/PP-Whitepaper-PowerPagesValue.png)
 
 ## 5. Enhanced Analytics and AI-Powered Insights (AI Builder, Power BI, and Copilot Studio)
 Power BI lets nonprofits visualize and monitor real-time metrics. AI Builder enables automation like OCR form processing or sentiment analysis of feedback. With Copilot, users can describe the app or flow they want in plain English, and AI will build it<sup>[10]</sup>. Fundraisers can segment donors and personalize appeals based on AI-analyzed data. Copilot Studio enables custom agents trained on a nonprofit’s knowledge base, offering 24/7 donor or client support through natural language interaction<sup>[10]</sup>.
+
 ![AIBuilderValue](/Power-Platform/Whitepapers/images/PP-Whitepaper-AIBuilderValue.png)
 
 ## 6. Governance, Security, and Scalability (Managed Environments)
