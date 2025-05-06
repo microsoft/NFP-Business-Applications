@@ -16,6 +16,8 @@ Many nonprofits are experiencing flat or declining donor contributions in the wa
 - Inflation has further eroded the value of donations – for example, U.S. giving rose ~1.9% in 2023, but this lagged behind a 4.1% inflation rate, effectively reducing nonprofits’ purchasing power <sup>[3]</sup>.
 - Global crises have strained traditional funding sources like government grants and private philanthropy <sup>[4]</sup>, contributing to donor fatigue in many regions. This volatile funding landscape makes financial planning and program sustainability a constant challenge.
 
+![GivingDecline](/Power-Platform/Whitepapers/images/PP-Whitepaper-GivingDecline.png)
+
 ### 2. Increased Demand, Limited Capacity
 While resources are tight, community needs have grown in the post-pandemic era. Nonprofits report longer waiting lists and, in some cases, reduced services because they simply lack the capacity to meet the increased demand<sup>[1]</sup>. Economic fallout from the pandemic and inflation has driven more individuals to seek support (for food, housing, health services, etc.), putting pressure on NGOs to do more with less. New humanitarian crises and social issues continue to emerge globally, meaning organizations must stretch to serve more people in need even as funding and staffing are constrained<sup>[4]</sup>.
 
@@ -26,8 +28,6 @@ Staffing has become a critical operational concern. A 2023 nationwide nonprofit 
 
 ### 4. Donor Expectations: Transparency and Trust
 There is a heightened demand for transparency, accountability, and demonstrated impact in the nonprofit sector. Public trust in nonprofits has wavered – the Edelman Trust Barometer recorded a 4-point drop in trust in nonprofits in 2023, with only ~52% of Americans saying they trust nonprofit organizations (meaning nearly half do not)<sup>[2]</sup>. Donors and regulators are calling for clearer reporting on how funds are used and what outcomes are achieved. Stakeholders now “demand evidence of effectiveness” and robust impact measurement to prove an organization’s worth<sup>[4]</sup>. In practice, this means charities must invest more effort in data collection, evaluation, and transparent communication. Nonprofits that cannot readily illustrate their impact risk losing support in an environment where trust is fragile and accountability is expected.
-
-![GivingDecline](/Power-Platform/Whitepapers/images/PP-Whitepaper-GivingDecline.png)
 
 ### 5. Operational Shifts in a Hybrid World
 The COVID-19 pandemic permanently altered how nonprofits operate, introducing new logistical challenges. For instance, in-person fundraising events and service delivery went virtual during 2020–2021 and have only partially reverted. Even as people return to physical events, many organizations report attendance and fundraising event participation are still below pre-pandemic levels. Donors and constituents have grown accustomed to the convenience of virtual engagement, so nonprofits must navigate a hybrid model – running both in-person and online events and services. This requires new skills and tools (e.g. streaming, virtual collaboration platforms) and adds complexity to planning. Moreover, internal operations have shifted to remote or hybrid work, raising the importance of digital infrastructure and cybersecurity. Smaller nonprofits, in particular, struggle to implement secure remote access and collaborative tools with limited IT staff. All told, adapting processes to the “new normal” has been an ongoing test of nonprofits’ agility and resilience.<sup>[5]</sup>
