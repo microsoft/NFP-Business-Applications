@@ -1,5 +1,6 @@
-# 🚀 Power Platform Solution Accelerators and Demo Assets
-These solutions are intended to make it easier for nonprofits, ISV partners and other solution providers to create customized, industry-specific solutions. These are not production-ready solutions and are designed to be customized for an organization's specific business needs.
+# 🚀 Power Platform Solution Accelerators and Whitepapers
+This folder includes solution accelerators and strategic whitepapers designed to help nonprofits, ISV partners, and solution providers envision and implement tailored Power Platform solutions. These assets showcase how low-code tools can address real-world industry challenges—from proofs of concept ready for customization to thought leadership on emerging trends. 
+> Note: Solution accelerators are not production-ready and should be adapted to meet specific organizational needs.
 
 ## 📋 Contents
 | Name | Description | Power Apps | Power Automate | Power Pages | Copilot Studio | AI Builder | Dataverse | Premium Licensing Needed | 
