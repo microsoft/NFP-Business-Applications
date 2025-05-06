@@ -6,10 +6,14 @@ Welcome to the Tech for Social Impact Biz Apps Demo Repository. This repository 
 ## Demos
 
 ### Power Platform
-Below is a listing of the sample solutions available. These sample solution files are meant for demonstration purposes only to quickly showcase various features across the platform.
+Below is a listing of the sample solution accelerators and demos available. These sample solution files are meant for demonstration purposes only to showcase various features across the platform.
 | Demo Name | Power Apps | Power Automate | Power Pages | Copilot Studio | AI Builder | Dataverse | Premium Licensing Needed | 
 | --------------- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [AI Pricing Tool](/Power-Platform/Solution-Accelerators/AI-Pricing-Tool) | ✔️ | ✔️ |  |  | ✔️ | ✔️ | ✔️ | 
+
+## Whitepapers
+Below are whitepapers that have been created specifically for use by our nonprofit and NGO customers.
+- [**The Future of Nonprofit Operations: AI-Powered Mission Delivery with Microsoft Power Platform**]()
 
 ### Dynamics 365 ERP
 | Demo Name | Finance | Supply Chain | Project Operations | Commerce | Human Resources |
@@ -25,7 +29,7 @@ Below is a listing of the sample solutions available. These sample solution file
 ## Webinar Series
 
 We have various webinar series aimed to connect with our nonprofit and NGO customers to showcase and share the latest in the Power Platform
-* [Power Hour](link here)
+* [Power Hour](https://msit.events.teams.microsoft.com/event/371790cc-c859-47ce-a3c1-90deaf3311e0@72f988bf-86f1-41af-91ab-2d7cd011db47)
 * [Power Platform for Nonprofits Webinar Series](https://aka.ms/nfpwebinars)
 
 
