@@ -94,6 +94,7 @@ Power Automate enables organizations to automate a myriad of routine processes, 
 
 ## 4. External Engagement and Self-Service Portals (Power Pages)
 Power Pages allows nonprofits to build secure web portals for donors, volunteers, or clients without requiring deep web development. These portals connect directly to Dataverse. Degrees of Change used Power Pages to replace PDF-based scholarship applications with a full online experience for students and reviewers<sup>[14]</sup>. Other nonprofits use Power Pages to offer donor login dashboards, grantee submission forms, and volunteer sign-up systems—all with secure login and easy updates.
+![PowerPagesValue](/Power-Platform/Whitepapers/images/PP-Whitepaper-PowerPagesValue.png)
 
 ## 5. Enhanced Analytics and AI-Powered Insights (AI Builder, Power BI, and Copilot Studio)
 Power BI lets nonprofits visualize and monitor real-time metrics. AI Builder enables automation like OCR form processing or sentiment analysis of feedback. With Copilot, users can describe the app or flow they want in plain English, and AI will build it<sup>[10]</sup>. Fundraisers can segment donors and personalize appeals based on AI-analyzed data. Copilot Studio enables custom agents trained on a nonprofit’s knowledge base, offering 24/7 donor or client support through natural language interaction<sup>[10]</sup>.
