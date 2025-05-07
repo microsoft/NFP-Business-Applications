@@ -38,6 +38,9 @@ Please consult the [Power Platform Licensing Guide](https://go.microsoft.com/fwl
 > *Credits apply to both training and production use.
 > For AI Builder capacity add-on SKUs, purchased capacity is enforced monthly and unused service credits do not carry over month to month.
 
+**Please reach out to our team [here](https://forms.office.com/r/thbycKHAnA) if you would like to purchase licensing to use this solution.** 
+
+**Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
 
 ## 📦 Solution Contents
 
