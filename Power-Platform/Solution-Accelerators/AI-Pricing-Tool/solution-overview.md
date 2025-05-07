@@ -89,10 +89,10 @@ To deploy and use this solution, your environment must meet the following requir
 
 ### 💳 Licensing Requirements
 This solution is built on the Microsoft Power Platform, and leverages Power Apps, Dataverse, AI Builder, and Power Automate. 
+Please consult the [Power Platform Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) for the latest licensing information. 
+**Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
 
 **Please reach out to our team [here](https://forms.office.com/r/thbycKHAnA) if you would like to purchase licensing to use this solution.** 
-
-**Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
 
 | **Capability**                  | **License Requirement**                                                                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -111,8 +111,6 @@ The following guidance is based on AI Builder licensing rates as of May 2025. Pl
     `100,000 × 118 = 11,800,000 credits/month`
 
 ##### 💳 AI Builder Capacity Pack Options (as of May 2025) #####
-Please consult the [Power Platform Licensing Guide](https://go.microsoft.com/fwlink/?linkid=2085130) for the latest licensing information. 
-**Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
 
 | **Capacity Pack Tiers** | **AI Builder add-on SKU Names**        | **Minimum Purchase** | 
 |--------------------------|----------------------------------------|------------------------|
