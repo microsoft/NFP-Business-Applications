@@ -9,7 +9,8 @@ Welcome to the Tech for Social Impact Biz Apps Demo Repository. This repository 
 Below is a listing of the sample solution accelerators and demos available. These sample solution files are meant for demonstration purposes only to showcase various features across the platform.
 | Demo Name | Power Apps | Power Automate | Power Pages | Copilot Studio | AI Builder | Dataverse | Premium Licensing Needed | 
 | :-----: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [AI Pricing Tool](/Power-Platform/Solution-Accelerators/AI-Pricing-Tool) | ✔️ | ✔️ |  |  | ✔️ | ✔️ | ✔️ | 
+| [AI Pricing Tool](https://github.com/microsoft/TSI-Business-Applications/tree/main/Power-Platform/Solution-Accelerators/AI-Pricing-Tool) | ✔️ | ✔️ |  |  | ✔️ | ✔️ | ✔️ | 
+| [Policy Approval Tool **(COMING SOON)**](https://github.com/microsoft/TSI-Business-Applications/tree/main/Power-Platform/Solution-Accelerators/Policy-Approval-Tool) | ✔️ | ✔️ |  |  |  | ✔️ | ✔️ | 
 
 ### Dynamics 365 ERP
 | Demo Name | Finance | Supply Chain | Project Operations | Commerce | Human Resources |
