@@ -11,7 +11,11 @@ This solution showcases how Power Platform can be used to automate pricing looku
 4. Assets: This folder contains images used throughout the markdown files.
 
 # 💳 Licensing Requirements
-This solution is built on the Microsoft Power Platform. **Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
+This solution is built on the Microsoft Power Platform, and leverages Power Apps, Dataverse, AI Builder, and Power Automate. 
+
+**Please reach out to our team [here](https://forms.office.com/r/thbycKHAnA) if you would like to purchase licensing to use this solution.** 
+
+**Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
 
 | **Capability**                  | **License Requirement**                                                                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
