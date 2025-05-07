@@ -88,7 +88,11 @@ To deploy and use this solution, your environment must meet the following requir
 - Access to the **Power Platform** to import and configure solution components
 
 ### 💳 Licensing Requirements
-This solution is built on the Microsoft Power Platform. **Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
+This solution is built on the Microsoft Power Platform, and leverages Power Apps, Dataverse, AI Builder, and Power Automate. 
+
+**Please reach out to our team [here](https://forms.office.com/r/thbycKHAnA) if you would like to purchase licensing to use this solution.** 
+
+**Visit [Microsoft for Nonprofit](https://www.microsoft.com/en-us/nonprofits/dynamics-365) for information about our nonprofit offers and discounting.**
 
 | **Capability**                  | **License Requirement**                                                                                                                                |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
