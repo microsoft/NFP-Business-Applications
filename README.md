@@ -12,7 +12,9 @@ Below is a listing of the sample solution accelerators and demos available. Thes
 | [AI Pricing Tool](https://github.com/microsoft/TSI-Business-Applications/tree/main/Power-Platform/Solution-Accelerators/AI-Pricing-Tool) | ✔️ | ✔️ |  |  | ✔️ | ✔️ | ✔️ | 
 | [Policy Approval Tool **(COMING SOON)**](https://github.com/microsoft/TSI-Business-Applications/tree/main/Power-Platform/Solution-Accelerators/Policy-Approval-Tool) | ✔️ | ✔️ |  |  |  | ✔️ | ✔️ | 
 
-### Dynamics 365 ERP
+### Dynamics 365 ERP and Dynamics 365 CRM
+Our team is working hard to bring accelerators and assets to you in our D365 ERP and D365 CRM space. Stay tuned for updates!
+<!--
 | Demo Name | Finance | Supply Chain | Project Operations | Commerce | Human Resources |
 | --------------- | :---: | :---: | :---: | :---: | :---: | 
 | [Demo Name](demos/demolink/README.md) | ✔️ | ✔️ |  |  | ✔️ |
@@ -21,6 +23,7 @@ Below is a listing of the sample solution accelerators and demos available. Thes
 | Demo Name | Sales | Customers Insights | Customer Service | Contact Center | Field Service |
 | --------------- | :---: | :---: | :---: | :---: | :---: | 
 | [Demo Name](demos/demolink/README.md) | ✔️ | ✔️ |  |  | ✔️ |
+-->
 
 ## Whitepapers
 Below are whitepapers that have been created specifically for use by our nonprofit and NGO customers.
