@@ -120,10 +120,10 @@ Please consult the [Power Platform Licensing Guide](https://go.microsoft.com/fwl
 | Tier 2                  | AI Builder Capacity T2 add-on          | 10 capacity packs      |
 | Tier 3                  | AI Builder Capacity T3 add-on          | 50 capacity packs      |
 
-- 📌 *Each pack includes **1 million service credits** per month.
+- 📌 Each pack includes **1 million service credits** per month.
 - ⚠️ AI Builder credits are not included in Power Apps Developer environments by default.
-- *Service credits are used across Power Automate, Power Apps, and Dynamics 365 AI Builder models.
-- *Credits apply to both training and production use.
+- Service credits are used across Power Automate, Power Apps, and Dynamics 365 AI Builder models.
+- Credits apply to both training and production use.
 - For AI Builder capacity add-on SKUs, purchased capacity is enforced monthly and unused service credits do not carry over month to month.
 
 ### 🔗 Permissions & Connectors
