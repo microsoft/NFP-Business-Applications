@@ -7,7 +7,7 @@ This solution showcases how Power Platform can be used to automate pricing looku
 # 📦 Contents
 1. [AI_Pricing_Tool_1_0_0_1.zip](/Power-Platform/Solution-Accelerators/AI-Pricing-Tool/AI_Pricing_Tool_1_0_0_1.zip): This .zip file is packaged solution that will be imported for installation. Download this .zip file in preparation for installation. **You do not need to unzip the file.**
 2. [solution-overview.md](/Power-Platform/Solution-Accelerators/AI-Pricing-Tool/solution-overview.md): This markdown contains important information about the solution. **Please read this file before installing.**
-3. [installation-guide.md](Power-Platform/Solution-Accelerators/AI-Pricing-Tool/installation-guide.md): This markdown contains step-by-step instructions to install the solution in your own environment.
+3. [installation-guide.md](https://github.com/microsoft/TSI-Business-Applications/blob/main/Power-Platform/Solution-Accelerators/AI-Pricing-Tool/installation-guide.md): This markdown contains step-by-step instructions to install the solution in your own environment.
 4. Assets: This folder contains images used throughout the markdown files.
 
 # 💳 Licensing Requirements
