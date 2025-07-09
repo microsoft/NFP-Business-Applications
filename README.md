@@ -33,8 +33,7 @@ Below are whitepapers that have been created specifically for use by our nonprof
 ## Webinar Series
 
 We have various webinar series aimed to connect with our nonprofit and NGO customers to showcase and share the latest in the Power Platform
-* [Power Hour](https://msit.events.teams.microsoft.com/event/371790cc-c859-47ce-a3c1-90deaf3311e0@72f988bf-86f1-41af-91ab-2d7cd011db47)
-* [Power Platform for Nonprofits Webinar Series](https://aka.ms/nfpwebinars)
+Stay tuned as we update this site for FY26!
 
 
 ## Training Resources
