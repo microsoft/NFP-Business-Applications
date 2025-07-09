@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload AI Pricing Tool Clickthrough
-          path: 'Power-Platform/Solution-Accelerators/AI-Pricing-Tool/click-throughs'
+          path: 'docs'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
