@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Pricing Tool Demonstration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left-pane {
+            width: 20%;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            overflow-y: auto;
+            border-radius: 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            margin: 20px;
+        }
+
+        .right-pane {
+            width: 80%;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            margin: 20px 20px 20px 0;
+        }
+
+        .media-container {
+            position: relative;
+            max-width: 100%;
+            max-height: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 0;
+            padding: 10px;
+        }
+
+        .media-container img,
+        .media-container video {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border-radius: 0px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .media-container img.loaded,
+        .media-container video.loaded {
+            opacity: 1;
+        }
+
+        .hotspot {
+            position: absolute;
+            cursor: pointer;
+            background-color: rgba(255, 235, 59, 0.3);
+            border: .5px solid #ffeb3b;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .hotspot:hover {
+            background-color: rgba(255, 235, 59, 0.5);
+            transform: scale(1.1);
+        }
+
+        .hotspot.pulse {
+            animation: pulse 2s infinite;
+        }
+
+        .hotspot-label {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 15px;
+            font-size: 14px;
+            font-weight: 500;
+            max-width: 375px;
+            word-wrap: break-word;
+            white-space: normal;
+            z-index: 11;
+            pointer-events: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            transition: all 0.1s ease;
+        }
+
+        .hotspot-label.top,
+        .hotspot-label.bottom {
+            text-align: center;
+        }
+
+        .hotspot-label.left {
+            text-align: center;
+        }
+
+        .hotspot-label.right {
+            text-align: center;
+        }
+
+        .hotspot-label::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        .hotspot-label.top::after {
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 6px 6px 0 6px;
+            border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+        }
+
+        .hotspot-label.bottom::after {
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 0 6px 6px 6px;
+            border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+        }
+
+        .hotspot-label.left::after {
+            top: 50%;
+            left: 100%;
+            transform: translateY(-50%);
+            border-width: 6px 0 6px 6px;
+            border-color: transparent transparent transparent rgba(0, 0, 0, 0.8);
+        }
+
+        .hotspot-label.right::after {
+            top: 50%;
+            right: 100%;
+            transform: translateY(-50%);
+            border-width: 6px 6px 6px 0;
+            border-color: transparent rgba(0, 0, 0, 0.8) transparent transparent;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+            background-color: transparent;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 1px solid #f5f5f5;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            background-color: transparent;
+            color: #333;
+            border: 0px solid #333;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            min-width: 120px;
+        }
+
+        .btn:hover {
+            color: rgb(129, 129, 129);
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn:disabled {
+            background-color: transparent;
+            color: #ccc;
+            border-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .btn:disabled:hover {
+            background-color: transparent;
+            color: #ccc;
+        }
+
+        .progress-indicator {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        .chapter-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #000000;
+            border-bottom: 2px solid #000000;
+            padding-bottom: 10px;
+        }
+
+        .content-section {
+            margin-bottom: 30px;
+        }
+
+        .content-section h3 {
+            color: #000000;
+            margin-bottom: 15px;
+        }
+
+        .content-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            color: #7f8c8d;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            
+            .left-pane {
+                width: 100%;
+                height: 40%;
+            }
+            
+            .right-pane {
+                width: 100%;
+                height: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-pane">
+            <div id="dynamic-content">
+                <h1>Welcome Screen</h1>
+                <p>Welcome to the AI Pricing Tool Solution Accelerator demonstration. This solution incorporates several tools from Microsoft Power Platform.</p>
+                <p>Click the highlighted area to get started. This will launch the Image Capture step of the process.</p>
+                <p>The welcome screen provides an overview of what the tool can do and guides users to the first step of the process.</p>
+            </div>
+        </div>
+
+        <div class="right-pane">
+            <div class="progress-indicator">
+                <span id="progress-text">1 / 10</span>
+            </div>
+
+            <div class="media-container" id="media-container">
+                <div class="loading">Loading media...</div>
+            </div>
+
+            <div class="controls">
+                <button class="btn" id="prev-btn" onclick="previousMedia()">Previous</button>
+                <button class="btn" id="next-btn" onclick="nextMedia()">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Media configuration
+        const mediaFiles = [
+            { file: 'content/chapter1/01.png', type: 'image', description: 'First image in the sequence' },
+            { file: 'content/chapter1/02.png', type: 'image', description: 'Second image in the sequence' },
+            { file: 'content/chapter1/03.png', type: 'image', description: 'Third image in the sequence' },
+            { file: 'content/chapter1/04.png', type: 'image', description: 'Fourth image in the sequence' },
+            { file: 'content/chapter1/05.png', type: 'image', description: 'Fifth image in the sequence' },
+            { file: 'content/chapter1/06.mp4', type: 'video', description: 'First video in the sequence' },
+            { file: 'content/chapter1/07.png', type: 'image', description: 'Seventh image in the sequence' },
+            { file: 'content/chapter1/08.png', type: 'image', description: 'Eighth image in the sequence' },
+            { file: 'content/chapter1/09.png', type: 'image', description: 'Ninth image in the sequence' },
+            { file: 'content/chapter1/10.mp4', type: 'video', description: 'Final video in the sequence' }
+        ];
+
+        // Dynamic content configuration for each media file
+        const mediaContent = {
+            'content/chapter1/01.png': `
+  <div style="line-height: 1.4; font-size: 14px;">
+    <h2 style="margin-bottom: 0.5em;">AI Pricing Tool</h2>
+    <p style="margin: 0 0 0.75em 0;">Welcome to the <strong>AI Pricing Tool</strong> — a Power Platform-based solution designed to streamline the process of evaluating donated clothing items.</p>
+
+    <p style="margin: 0 0 0.75em 0;">This solution accelerator demonstrates how we can use low-code tools to create intelligent pricing automation powered by AI.</p>
+
+    <p style="margin: 0 0 0.5em 0;">We’ve combined three core Power Platform capabilities:</p>
+    <ul style="margin-top: 0; padding-left: 1.2em;">
+      <li><strong>Power Apps and Power Fx</strong> provide a responsive, easy-to-use interface for capturing clothing item details.</li>
+      <li><strong>AI Builder</strong> uses custom prompts to identify brand logos, generate descriptive metadata, and perform real-time market pricing lookups.</li>
+      <li><strong>Power Automate and Dataverse</strong> store the item, assign a unique barcode, and prepare it for resale or internal tracking.</li>
+    </ul>
+
+    <p style="margin: 1em 0 0.75em 0;"><em>This demo is not a production solution — it’s a solution accelerator showcasing what’s possible with AI and automation on the Power Platform.</em></p>
+
+    <p style="font-weight: bold; margin: 0;">Let’s go ahead and get started.</p>
+  </div>
+`,
+'content/chapter1/02.png': `
+  <div style="line-height: 1.4; font-size: 14px;">
+    <h2 style="margin-bottom: 0.5em;">Capture Image</h2>
+    <p style="margin: 0 0 0.75em 0;">The camera interface allows users to capture images of the items they want to price. You can either take a new photo or upload an existing one — this is the first step in the AI analysis process.</p>
+
+    <p style="margin: 0 0 0.5em 0;">When capturing the image:</p>
+    <ul style="margin-top: 0; padding-left: 1.2em;">
+      <li>Position your item clearly in the viewfinder</li>
+      <li>Ensure the area is well-lit for best results</li>
+      <li>Click the viewfinder to take a photo, or choose an image file to upload</li>
+    </ul>
+
+    <p style="margin-top: 1em;"><em>Better image quality leads to more accurate AI analysis and pricing recommendations.</em></p>
+  </div>
+`,
+            'content/chapter1/03.png': `
+  <div style="line-height: 1.4; font-size: 14px;">
+    <h2 style="margin-bottom: 0.5em;">Capture Image</h2>
+    <p style="margin: 0 0 0.75em 0;">Once the image is captured, you can proceed to analyze it.</p>
+
+    <p style="margin: 0 0 0.5em 0;"><strong>Next Step:</strong> Click the <em>Analyze Image</em> button to continue with AI processing.</p>
+  </div>
+`,
+            'content/chapter1/04.png': `
+  <div style="line-height: 1.4; font-size: 14px;">
+    <h2 style="margin-bottom: 0.5em;">Condition Selection</h2>
+    <p style="margin: 0 0 0.75em 0;">Selecting the correct condition is crucial for accurate pricing. The AI uses this input to determine fair market value based on item quality.</p>
+
+    <p style="margin: 0 0 0.5em 0;"><strong>Instructions:</strong></p>
+    <ul style="margin-top: 0; padding-left: 1.2em;">
+      <li>Choose the condition that best represents your item</li>
+      <li><em>Excellent</em> means like-new or barely used</li>
+      <li>This selection directly influences the recommended price</li>
+    </ul>
+
+    <p style="margin-top: 1em;"><strong>Important:</strong> Accurately reporting condition ensures trustworthy pricing and better expectations for resale.</p>
+  </div>
+`,
+            'content/chapter1/05.png': `
+  <div style="line-height: 1.4; font-size: 14px;">
+    <h2 style="margin-bottom: 0.5em;">Price Search</h2>
+    <p style="margin: 0 0 0.75em 0;">Now that the item details and condition are set, we can run the AI price search to get up-to-date market pricing.</p>
+
+    <p style="margin: 0 0 0.5em 0;"><strong>What happens next:</strong></p>
+    <ul style="margin-top: 0; padding-left: 1.2em;">
+      <li>Click <em>Run Price Search</em> to begin the analysis</li>
+      <li>Our custom AI Builder prompt is executing in the background</li>
+    </ul>
+
+    <p style="margin-top: 1em;"><em>The AI searches across platforms and databases to provide the most current and realistic pricing recommendation.</em></p>
+  </div>
+`,
+            'content/chapter1/06.mp4': `
+  <div style="line-height: 1.4; font-size: 14px;">
+    <h2 style="margin-bottom: 0.5em;">Processing Results</h2>
+    <p style="margin: 0 0 0.75em 0;">The AI is now processing all the gathered information to generate comprehensive pricing recommendations.</p>
+
+    <p style="margin: 0 0 0.5em 0;"><strong>Processing includes:</strong></p>
+    <ul style="margin-top: 0; padding-left: 1.2em;">
+      <li>Analyzing market data</li>
+      <li>Considering multiple pricing factors</li>
+      <li>Generating results automatically</li>
+    </ul>
+
+    <p style="margin-top: 1em;"><strong>Note:</strong> This process incorporates historical sales data, current market trends, and item-specific attributes to deliver accurate pricing guidance.</p>
+  </div>
+`,
+            'content/chapter1/07.png': `
+  <div style="line-height: 1.4; font-size: 14px;">
+    <h2 style="margin-bottom: 0.5em;">Pricing Results</h2>
+    <p style="margin: 0 0 0.75em 0;">The AI has generated pricing recommendations based on current market analysis. Review the results and get ready to generate product tags.</p>
+
+    <p style="margin: 0 0 0.5em 0;"><strong>Review the results:</strong></p>
+    <ul style="margin-top: 0; padding-left: 1.2em;">
+      <li>Examine the pricing recommendations</li>
+      <li>Note the range of values: minimum, suggested, and maximum</li>
+      <li>Click to generate barcode and tag when satisfied</li>
+    </ul>
+
+    <p style="margin-top: 1em;"><em>The pricing guidance helps ensure informed decisions based on item condition and current market demand.</em></p>
+  </div>
+`,
+            'content/chapter1/08.png': `
+  <div style="line-height: 1.4; font-size: 14px;">
+    <h2 style="margin-bottom: 0.5em;">Price Adjustment</h2>
+    <p style="margin: 0 0 0.75em 0;">Fine-tune your pricing by adjusting the resale price using the provided controls. Set the optimal price for your item based on market trends and sales goals.</p>
+
+    <p style="margin: 0 0 0.5em 0;"><strong>Adjustment options:</strong></p>
+    <ul style="margin-top: 0; padding-left: 1.2em;">
+      <li>You can override any of autopopulated fields</li>
+      <li>Set the price to the average, minimum, or maximum suggested value</li>
+      <li>Review all populated item information before generating the tag</li>
+    </ul>
+
+    <p style="margin-top: 1em;"><strong>Consider:</strong> Higher prices may yield better margins but could extend the sales cycle. Adjust based on your resale strategy.</p>
+  </div>
+`,
+            'content/chapter1/09.png': `
+  <div style="line-height: 1.4; font-size: 14px;">
+    <h2 style="margin-bottom: 0.5em;">Barcode Generation</h2>
+    <p style="margin: 0 0 0.75em 0;">Generate a barcode and product tag for your item with the finalized pricing and product information.</p>
+
+    <p style="margin: 0 0 0.5em 0;"><strong>Final steps:</strong></p>
+    <ul style="margin-top: 0; padding-left: 1.2em;">
+      <li>Click <em>Generate Barcode</em> to create the tag</li>
+      <li>All item and pricing information will be included</li>
+      <li>The barcode will be ready for printing</li>
+    </ul>
+
+    <p style="margin-top: 1em;"><em>The generated barcode contains all the essential information needed for inventory tracking and sales processing.</em></p>
+  </div>
+`,
+            'content/chapter1/10.mp4': `
+  <div style="line-height: 1.4; font-size: 14px;">
+    <h2 style="margin-bottom: 0.5em;">Final Processing</h2>
+    <p style="margin: 0 0 0.75em 0;">As the final step, the system generates your barcode and product tag using all of the captured information — including condition, price, description, and branding.</p>
+
+    <p style="margin: 0 0 0.5em 0;"><strong>What’s happening in the background:</strong></p>
+    <ul style="margin-top: 0; padding-left: 1.2em;">
+      <li>A Power Automate flow is triggered to save the item to the <em>DonatedGoods</em> table in Dataverse</li>
+      <li>All item attributes — like resale value and recycling composition — are stored for future reference</li>
+      <li>A unique barcode is generated and displayed on screen</li>
+    </ul>
+
+    <p style="margin: 0.75em 0 0.5em 0;"><strong>Barcode logic:</strong></p>
+    <ul style="margin-top: 0; padding-left: 1.2em;">
+      <li>The barcode is color-coded based on a configurable 5-week cycle</li>
+      <li>This supports automatic markdowns at the point of sale — for example, 20% off after 5 weeks</li>
+      <li>Organizations can adjust this timing and color-coding logic to match their retail policies</li>
+    </ul>
+
+    <p style="margin-top: 1em;"><strong>Success:</strong> You can now print and attach the completed product tag. Your item is ready for resale, tracking, or donation processing — with AI-enhanced insights powering every step.</p>
+  </div>
+`
+        };
+
+        // Default content for when no specific content is defined
+        const defaultContent = `
+            <h1>Interactive Media Viewer</h1>
+            <p>Navigate through the content using the hotspots on images or the navigation controls below.</p>
+            <ul>
+                <li>Click on highlighted hotspots to advance</li>
+                <li>Use the navigation buttons for manual control</li>
+                <li>Videos will play automatically when displayed</li>
+            </ul>
+            <p><em>Follow the sequence to see the complete workflow and interaction patterns.</em></p>
+        `;
+
+        // Hotspot configuration - you can modify these coordinates and labels
+        const hotspots = {
+            '01.png': [{ 
+                x: 25, y: 66.5, width: 50, height: 50,
+                label: "Welcome to the AI Pricing Tool Solution Accelerator. Let's get started. Click here.",
+                labelPosition: "bottom",
+                labelWidth: 375,
+                labelDistance: 15
+            }],
+            '02.png': [{ 
+                x: 50, y: 71.5, width: 50, height: 50,
+                label: "First, we'll open the camera to capture a picture of our item.",
+                labelPosition: "top",
+                labelWidth: 250,
+                labelDistance: 55
+            }],
+            '03.png': [{ 
+                x: 75, y: 94.5, width: 50, height: 50,
+                label: "Now that we've captured our item, let's proceed to analyze the image.",
+                labelPosition: "left",
+                labelWidth: 280,
+                labelDistance: 55
+            }],
+            '04.png': [{ 
+                x: 4.5, y: 42, width: 30, height: 30,
+                label: "Here we can select the condition of the item to be considered in the analysis. Let's choose 'Excellent'.",
+                labelPosition: "right",
+                labelWidth: 375,
+                labelDistance: 75
+            }],
+            '05.png': [{ 
+                x: 10, y: 49, width: 35, height: 35,
+                label: "Now we're all set to Run the Price Search. Click the button to proceed.",
+                labelPosition: "right",
+                labelWidth: 300,
+                labelDistance: 40
+            }],
+            '07.png': [{ 
+                x: 60, y: 94.25, width: 50, height: 50,
+                label: "Awesome! We got our results. \nNow let's generate a barcode and tag for our item.",
+                labelPosition: "top",
+                labelWidth: 365,
+                labelDistance: 55
+            }],
+            '08.png': [{ 
+                x: 24.5, y: 54.5, width: 55, height: 55,
+                label: "Here we can see the information captured from the analysis has already been populated. \nWe can modify the Resale Price using the buttons. \nLet's set the resale price to the maximum suggested.",
+                labelPosition: "right",
+                labelWidth: 365,
+                labelDistance: 30
+            }],
+            '09.png': [{ 
+                x: 10, y: 68, width: 50, height: 50,
+                label: "Perfect. Now we'll generate a barcode as our final step.",
+                labelPosition: "right",
+                labelWidth: 430,
+                labelDistance: 25
+            }]
+        };
+
+        let currentIndex = 0;
+        let currentMediaElement = null;
+
+        // Initialize the viewer
+        function init() {
+            // Remove loading text
+            const container = document.getElementById('media-container');
+            container.innerHTML = '';
+            
+            loadFirstMedia();
+            updateUI();
+        }
+
+        // Load first media without transition
+        function loadFirstMedia() {
+            const container = document.getElementById('media-container');
+            const media = mediaFiles[0];
+            
+            let firstMediaElement;
+            if (media.type === 'image') {
+                firstMediaElement = document.createElement('img');
+                firstMediaElement.src = media.file;
+                firstMediaElement.alt = media.description;
+                
+                firstMediaElement.onload = function() {
+                    firstMediaElement.classList.add('loaded');
+                    createHotspots(firstMediaElement, media.file);
+                };
+            } else if (media.type === 'video') {
+                firstMediaElement = document.createElement('video');
+                firstMediaElement.src = media.file;
+                firstMediaElement.controls = false;
+                firstMediaElement.autoplay = true;
+                firstMediaElement.muted = true;
+                
+                firstMediaElement.onloadeddata = function() {
+                    firstMediaElement.classList.add('loaded');
+                };
+                
+                firstMediaElement.onended = function() {
+                    if (currentIndex < mediaFiles.length - 1) {
+                        nextMedia();
+                    }
+                };
+            }
+            
+            container.appendChild(firstMediaElement);
+            currentMediaElement = firstMediaElement;
+        }
+
+        // Load media at specified index
+        function loadMedia(index) {
+            const container = document.getElementById('media-container');
+            const media = mediaFiles[index];
+            const existingMedia = container.querySelector('img.loaded, video.loaded');
+            
+            // Remove hotspots from previous media immediately
+            const oldHotspots = container.querySelectorAll('.hotspot, .hotspot-label');
+            oldHotspots.forEach(hotspot => hotspot.remove());
+            
+            // Create new media element
+            let newMediaElement;
+            if (media.type === 'image') {
+                newMediaElement = document.createElement('img');
+                newMediaElement.src = media.file;
+                newMediaElement.alt = media.description;
+                
+                newMediaElement.onload = function() {
+                    // Remove old media immediately
+                    if (existingMedia && existingMedia.parentNode) {
+                        existingMedia.remove();
+                    }
+                    
+                    // Add and show new media immediately
+                    container.appendChild(newMediaElement);
+                    newMediaElement.classList.add('loaded');
+                    createHotspots(newMediaElement, media.file);
+                };
+            } else if (media.type === 'video') {
+                newMediaElement = document.createElement('video');
+                newMediaElement.src = media.file;
+                newMediaElement.controls = false;
+                newMediaElement.autoplay = true;
+                newMediaElement.muted = true;
+                
+                newMediaElement.onloadeddata = function() {
+                    // Remove old media immediately
+                    if (existingMedia && existingMedia.parentNode) {
+                        existingMedia.remove();
+                    }
+                    
+                    // Add and show new media immediately
+                    container.appendChild(newMediaElement);
+                    newMediaElement.classList.add('loaded');
+                };
+                
+                newMediaElement.onended = function() {
+                    if (currentIndex < mediaFiles.length - 1) {
+                        nextMedia();
+                    }
+                };
+            }
+            
+            currentMediaElement = newMediaElement;
+        }
+
+        // Create hotspots for images
+        function createHotspots(imgElement, filename) {
+            const baseName = filename.split('/').pop();
+            const mediaHotspots = hotspots[baseName];
+            
+            if (!mediaHotspots) return;
+            
+            const container = document.getElementById('media-container');
+            
+            // Wait for image to load to get dimensions
+            const createHotspotElements = () => {
+                const imgRect = imgElement.getBoundingClientRect();
+                const containerRect = container.getBoundingClientRect();
+                
+                mediaHotspots.forEach(hotspot => {
+                    const hotspotEl = document.createElement('div');
+                    hotspotEl.className = 'hotspot pulse';
+                    
+                    // Calculate position relative to the image
+                    const leftPos = (hotspot.x / 100) * imgRect.width;
+                    const topPos = (hotspot.y / 100) * imgRect.height;
+                    
+                    hotspotEl.style.left = `${leftPos - (hotspot.width / 2)}px`;
+                    hotspotEl.style.top = `${topPos - (hotspot.height / 2)}px`;
+                    hotspotEl.style.width = `${hotspot.width}px`;
+                    hotspotEl.style.height = `${hotspot.height}px`;
+                    
+                    hotspotEl.onclick = function() {
+                        nextMedia();
+                    };
+                    
+                    container.appendChild(hotspotEl);
+                    
+                    // Create label if provided
+                    if (hotspot.label) {
+                        const labelEl = document.createElement('div');
+                        labelEl.className = `hotspot-label ${hotspot.labelPosition || 'bottom'}`;
+                        labelEl.textContent = hotspot.label;
+                        
+                        // Set custom width if provided, otherwise use default max-width
+                        if (hotspot.labelWidth) {
+                            labelEl.style.width = `${hotspot.labelWidth}px`;
+                            labelEl.style.maxWidth = `${hotspot.labelWidth}px`;
+                        }
+                        
+                        // Set custom distance if provided, otherwise use defaults
+                        const distance = hotspot.labelDistance || 15;
+                        const topBottomDistance = hotspot.labelDistance || 35;
+                        
+                        // Position label relative to hotspot
+                        const labelPosition = hotspot.labelPosition || 'bottom';
+                        switch (labelPosition) {
+                            case 'top':
+                                labelEl.style.left = `${leftPos}px`;
+                                labelEl.style.top = `${topPos - (hotspot.height / 2) - topBottomDistance}px`;
+                                labelEl.style.transform = 'translateX(-50%)';
+                                break;
+                            case 'bottom':
+                                labelEl.style.left = `${leftPos}px`;
+                                labelEl.style.top = `${topPos + (hotspot.height / 2) + distance}px`;
+                                labelEl.style.transform = 'translateX(-50%)';
+                                break;
+                            case 'left':
+                                labelEl.style.left = `${leftPos - (hotspot.width / 2) - distance}px`;
+                                labelEl.style.top = `${topPos}px`;
+                                labelEl.style.transform = 'translate(-100%, -50%)';
+                                break;
+                            case 'right':
+                                labelEl.style.left = `${leftPos + (hotspot.width / 2) + distance}px`;
+                                labelEl.style.top = `${topPos}px`;
+                                labelEl.style.transform = 'translateY(-50%)';
+                                break;
+                        }
+                        
+                        container.appendChild(labelEl);
+                    }
+                });
+            };
+            
+            // Create hotspots after image loads
+            if (imgElement.complete) {
+                createHotspotElements();
+            } else {
+                imgElement.addEventListener('load', createHotspotElements);
+            }
+        }
+
+        // Navigate to next media
+        function nextMedia() {
+            if (currentIndex < mediaFiles.length - 1) {
+                currentIndex++;
+                loadMedia(currentIndex);
+                updateUI();
+            }
+        }
+
+        // Navigate to previous media
+        function previousMedia() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                if (currentIndex === 0) {
+                    // If going back to first media, reload it normally
+                    const container = document.getElementById('media-container');
+                    container.innerHTML = '';
+                    loadFirstMedia();
+                } else {
+                    loadMedia(currentIndex);
+                }
+                updateUI();
+            }
+        }
+
+        // Replay current media
+        function replayMedia() {
+            if (currentMediaElement && currentMediaElement.tagName === 'VIDEO') {
+                currentMediaElement.currentTime = 0;
+                currentMediaElement.play();
+            }
+        }
+
+        // Update content based on current media
+        function updateContent() {
+            const media = mediaFiles[currentIndex];
+            const content = mediaContent[media.file] || defaultContent;
+            
+            // Update the entire content with HTML
+            document.getElementById('dynamic-content').innerHTML = content;
+        }
+
+        // Update UI elements
+        function updateUI() {
+            const media = mediaFiles[currentIndex];
+            
+            // Update progress indicator
+            document.getElementById('progress-text').textContent = `${currentIndex + 1} / ${mediaFiles.length}`;
+            
+            // Update content
+            updateContent();
+            
+            // Update button states
+            document.getElementById('prev-btn').disabled = currentIndex === 0;
+            document.getElementById('next-btn').disabled = currentIndex === mediaFiles.length - 1;
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            switch(event.key) {
+                case 'ArrowRight':
+                case ' ':
+                    event.preventDefault();
+                    nextMedia();
+                    break;
+                case 'ArrowLeft':
+                    event.preventDefault();
+                    previousMedia();
+                    break;
+            }
+        });
+
+        // Handle window resize to reposition hotspots
+        window.addEventListener('resize', function() {
+            if (mediaFiles[currentIndex].type === 'image') {
+                // Reload media to recreate hotspots with correct positioning
+                loadMedia(currentIndex);
+            }
+        });
+
+        // Initialize when page loads
+        window.addEventListener('load', init);
+    </script>
+</body>
+</html>
