@@ -1,6 +1,6 @@
-# Tech for Social Impact: Biz Apps Demo Repository
+# Nonprofit: Biz Apps Demo Repository
 
-Welcome to the Tech for Social Impact Biz Apps Demo Repository. This repository was created to showcase sample solutions that run in the Power Platform and Dynamics 365 for our nonprofit and NGO customers.
+Welcome to the Nonprofit Biz Apps Demo Repository. This repository was created to showcase sample solutions that run in the Power Platform and Dynamics 365 for our nonprofit and NGO customers.
 ![BizAppsIcons](assets/BizAppsIcons.png)
 
 ## Solution Accelerators and Demos
