@@ -261,6 +261,48 @@
             color: #7f8c8d;
         }
 
+        /* Mobile detection notice */
+        .mobile-notice {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f8f9fa;
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .mobile-notice.show {
+            display: flex;
+        }
+
+        .mobile-notice h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .mobile-notice p {
+            color: #666;
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 500px;
+            margin-bottom: 15px;
+        }
+
+        .mobile-notice .icon {
+            font-size: 4em;
+            margin-bottom: 30px;
+            color: #007acc;
+        }
+
         /* Responsive design */
         @media (max-width: 768px) {
             .container {
@@ -280,6 +322,14 @@
     </style>
 </head>
 <body>
+    <div class="mobile-notice" id="mobile-notice">
+        <div class="icon">💻</div>
+        <h1>Desktop Experience Required</h1>
+        <p>This interactive demonstration is optimized for desktop and laptop computers.</p>
+        <p>For the best experience with all features and interactions, please access this content from a larger screen.</p>
+        <p style="margin-top: 30px; font-style: italic; color: #999;">Thank you for your understanding!</p>
+    </div>
+
     <div class="container">
         <div class="left-pane">
             <div id="dynamic-content">
@@ -307,6 +357,40 @@
     </div>
 
     <script>
+        // Mobile device detection
+        function isMobileDevice() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            // Check for mobile devices
+            const mobileRegex = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
+            const isMobile = mobileRegex.test(userAgent);
+            
+            // Check screen size as additional criteria
+            const isSmallScreen = window.innerWidth <= 768 || window.innerHeight <= 600;
+            
+            return isMobile || isSmallScreen;
+        }
+
+        // Show mobile notice if on mobile device
+        function checkDeviceAndShowNotice() {
+            const mobileNotice = document.getElementById('mobile-notice');
+            const container = document.querySelector('.container');
+            
+            if (isMobileDevice()) {
+                mobileNotice.classList.add('show');
+                container.style.display = 'none';
+            } else {
+                mobileNotice.classList.remove('show');
+                container.style.display = 'flex';
+            }
+        }
+
+        // Check on page load
+        document.addEventListener('DOMContentLoaded', checkDeviceAndShowNotice);
+        
+        // Check on window resize (for orientation changes)
+        window.addEventListener('resize', checkDeviceAndShowNotice);
+
         // Media configuration
         const mediaFiles = [
             { file: 'content/chapter1/01.png', type: 'image', description: 'First image in the sequence' },
