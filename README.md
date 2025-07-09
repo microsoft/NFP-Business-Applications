@@ -32,7 +32,7 @@ Below are whitepapers that have been created specifically for use by our nonprof
 
 ## Webinar Series
 
-We have various webinar series aimed to connect with our nonprofit and NGO customers to showcase and share the latest in the Power Platform
+We have various webinar series aimed to connect with our nonprofit and NGO customers to showcase and share the latest in the Power Platform.
 Stay tuned as we update this site for FY26!
 
 
