@@ -3,6 +3,16 @@
 Welcome to the Nonprofit Biz Apps Demo Repository. This repository was created to showcase sample solutions that run in the Power Platform and Dynamics 365 for our nonprofit and NGO customers.
 ![BizAppsIcons](assets/BizAppsIcons.png)
 
+## Webinar Series
+
+We have various webinar series aimed to connect with our nonprofit and NGO customers to showcase and share the latest in the Power Platform.
+Stay tuned as we update this site for FY26!
+### Upcoming Webinars
+* [Reimagining Fundraising: AI-Powered Tools for Nonprofit Impact](https://aka.ms/nextgenfundraising/)
+
+### Past Webinar Recordings
+* [AI-Powered Marketing Journeys for Nonprofits: Driving Donor Engagement with Microsoft Dynamics 365](https://aka.ms/nextgenmarketing)
+
 ## Solution Accelerators and Demos
 
 ### Power Platform
@@ -28,13 +38,6 @@ Our team is working hard to bring accelerators and assets to you in our D365 ERP
 ## Whitepapers
 Below are whitepapers that have been created specifically for use by our nonprofit and NGO customers.
 - [**The Future of Nonprofit Operations: AI-Powered Mission Delivery with Microsoft Power Platform**](https://github.com/microsoft/TSI-Business-Applications/blob/main/Power-Platform/Whitepapers/The%20Future%20of%20Nonprofit%20Operations%3A%20AI-Powered%20Mission%20Delivery%20with%20Microsoft%20Power%20Platform.md)
-
-
-## Webinar Series
-
-We have various webinar series aimed to connect with our nonprofit and NGO customers to showcase and share the latest in the Power Platform.
-Stay tuned as we update this site for FY26!
-
 
 ## Training Resources
 
